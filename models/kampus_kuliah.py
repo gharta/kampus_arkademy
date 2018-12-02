@@ -5,3 +5,5 @@ class KampusKuliah(models.Model):
     _name = 'kampus.kuliah'
 
     name = fields.Char('Name')
+    kapasitas_siswa = fields.Integer(string='Kapasitas Siswa', default=40)
+    is_full = fields.Boolean(string='Kelas Penuh ?')

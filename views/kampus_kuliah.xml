@@ -33,8 +33,10 @@
                     </header>
                     <sheet>
                         <group>
-                            <group>
+                            <group string="Detail Kelas">
                                 <field name="name"/>
+                                <field name="kapasitas_siswa"/>
+                                <field name="is_full"/>
                             </group>
                             <group>
                             </group>
