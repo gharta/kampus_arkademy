@@ -18,6 +18,8 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
+                    <field name="kapasitas_siswa"/>
+                    <field name="is_full"/>
                 </tree>
             </field>
         </record>

@@ -18,6 +18,9 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
+                    <field name="nomor_induk"/>
+                    <field name="alamat"/>
+                    <field name="tanggal_masuk"/>
                 </tree>
             </field>
         </record>
@@ -35,6 +38,9 @@
                         <group>
                             <group>
                                 <field name="name"/>
+                                <field name="nomor_induk"/>
+                                <field name="alamat"/>
+                                <field name="tanggal_masuk"/>
                             </group>
                             <group>
                             </group>
