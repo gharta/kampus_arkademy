@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="kampus_siswa_action">
+            <field name="name">Kampus Siswa</field>
+            <field name="res_model">kampus.siswa</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="kampus_siswa_menu" name="Kampus Siswa" sequence="200"/>
+        <menuitem id="sub_kampus_siswa_menu" parent="kampus_siswa_menu" name="Kampus Siswa" sequence="50" action="kampus_siswa_action" />
+        
+        <!-- Tree view for the menuitem -->
+        <record id="kampus_siswa_tree" model="ir.ui.view">
+            <field name="name">kampus.siswa.tree</field>
+            <field name="model">kampus.siswa</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        
+        <!-- Form view for the menuitem -->
+        <record id="kampus_siswa_form" model="ir.ui.view">
+            <field name="name">kampus.siswa.form</field>
+            <field name="model">kampus.siswa</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <!-- <button name="action_cancel" string="Cancel" type="object" /> -->
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
