@@ -41,10 +41,17 @@
                                 <field name="nomor_induk"/>
                                 <field name="alamat"/>
                                 <field name="tanggal_masuk"/>
+                                <field name="state"/>
                             </group>
                             <group>
                             </group>
                         </group>
+                        <notebook>
+                            <page string="Data Pribadi">
+                                <field name="gender"/>
+                                <field name="tanggal_lahir"/>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
