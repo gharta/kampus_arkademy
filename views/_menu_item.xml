@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="kampus_arkademy_main" name="Kampus Arkademy" sequence="1"/>
+        <menuitem id="master_data_menu" parent="kampus_arkademy_main" name="Master Data" sequence="1"/>
+    </data>
+</odoo>

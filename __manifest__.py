@@ -11,6 +11,7 @@
     'depends': [
     ],
     'data': [
+        'views/_menu_item.xml',
         'views/kampus_dosen.xml',
         'views/kampus_kuliah.xml',
         'views/kampus_siswa.xml',

@@ -8,8 +8,8 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem id="kampus_siswa_menu" name="Kampus Siswa" sequence="200"/>
-        <menuitem id="sub_kampus_siswa_menu" parent="kampus_siswa_menu" name="Kampus Siswa" sequence="50" action="kampus_siswa_action" />
+        <!-- <menuitem id="kampus_siswa_menu" name="Kampus Siswa" sequence="200"/> -->
+        <menuitem id="sub_kampus_siswa_menu" parent="master_data_menu" name="Kampus Siswa" sequence="10" action="kampus_siswa_action" />
         
         <!-- Tree view for the menuitem -->
         <record id="kampus_siswa_tree" model="ir.ui.view">
