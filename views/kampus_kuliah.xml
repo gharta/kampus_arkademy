@@ -45,6 +45,7 @@
                             <group>
                             </group>
                         </group>
+                        <field name="topik_ids"/>
                     </sheet>
                 </form>
             </field>
