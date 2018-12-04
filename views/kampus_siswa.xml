@@ -35,6 +35,11 @@
                         <!-- <button name="action_cancel" string="Cancel" type="object" /> -->
                     </header>
                     <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="get_kuliah_terkait" string="Enrollment" type="object" 
+                                class="oe_stat_button" icon="fa-building">
+                            </button>
+                        </div>
                         <group>
                             <group>
                                 <field name="name"/>
