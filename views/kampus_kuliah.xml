@@ -46,6 +46,7 @@
                             </group>
                         </group>
                         <field name="topik_ids"/>
+                        <field name="siswa_ids"/>
                     </sheet>
                 </form>
             </field>
