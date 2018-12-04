@@ -15,6 +15,7 @@
         'views/kampus_dosen.xml',
         'views/kampus_kuliah.xml',
         'views/kampus_siswa.xml',
+        'views/kampus_kuliah_topik.xml',
     ],
     'qweb': [
     ],

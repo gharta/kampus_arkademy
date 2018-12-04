@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record  id="kampus_kuliah_topik_action" model="ir.actions.act_window">
+            <field name="name">Topik Kuliah</field>
+            <field name="res_model">kampus.kuliah.topik</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="sub_kampus_kuliah_topik_menu" parent="master_data_menu" name="Topik Kuliah" sequence="40" action="kampus_kuliah_topik_action" />
+        
+        <!-- Tree view for the menuitem -->
+        <record id="kampus_kuliah_topik_tree" model="ir.ui.view">
+            <field name="name">kampus.kuliah.topik.tree</field>
+            <field name="model">kampus.kuliah.topik</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="kampus_id"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

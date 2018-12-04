@@ -48,8 +48,10 @@
                         </group>
                         <notebook>
                             <page string="Data Pribadi">
-                                <field name="gender"/>
-                                <field name="tanggal_lahir"/>
+                                <group>
+                                    <field name="gender"/>
+                                    <field name="tanggal_lahir"/>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
