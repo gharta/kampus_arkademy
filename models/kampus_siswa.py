@@ -25,6 +25,65 @@ class KampusSiswa(models.Model):
 
 
     def get_kuliah_terkait(self):
+
+        # """
+            # A. Ngambil Objek
+
+            # self.env['kampus.kuliah'] sama seperti
+
+            # Syntax SQL >
+            # "FROM kampus_kuliah"
+        # """
+        tabel_kampus_kuliah = self.env['kampus.kuliah']
+        tabel_kampus_siswa = self.env['kampus.siswa']
+
+        # """
+            # B. Membaca Satu Dokumen
+
+            # self.env['kampus.kuliah'].browse(1) sama seperti
+
+            # Syntax SQL >
+            # "FROM kampus_kuliah WHERE id = 1"
+        # """
+        kuliah_row_satu = self.env['kampus.kuliah'].browse(1)
+        siswa_row_satu = self.env['kampus.siswa'].browse(1)
+
+
+        # """
+            # C. Membaca kolom tertentu pada Satu Dokumen
+
+            # self.env['kampus.kuliah'].browse(1).name sama seperti
+
+            # Syntax SQL >
+            # "SELECT name FROM kampus_kuliah WHERE id = 1"
+        # """
+
+        kuliah_pertama_name = self.env['kampus.kuliah'].browse(1).name
+
+
+
+        siswa_pertama_name = self.env['kampus.siswa'].browse(1).name
+
+
+
+
+        self.env['kampus.kuliah']
+
+        self.env['kampus.kuliah'].browse(1)
+
+        self.env['kampus.kuliah'].browse(1).name
+        self.env['kampus.kuliah'].browse(1).umur
+        self.env['kampus.kuliah'].browse(1).dosen_id.id
+
+        # FROM kampus_kuliah
+
+        # FROM kampus_kuliah WHERE id = 1
+
+        # SELECT name FROM kampus_kuliah WHERE id = 1
+        # SELECT umur FROM kampus_kuliah WHERE id = 1
+        # SELECT dosen_id FROM kampus_kuliah WHERE id = 1
+
+
         nama_saya = self.name
         kuliah_doc_all = self.env['kampus.kuliah'].search([])
         id_yang_mesti_ditampilin = []
@@ -33,7 +92,9 @@ class KampusSiswa(models.Model):
             nama_siswa = dokumen_siswa.mapped('name') # ['Rezky', 'Tono', 'Dimas ]
             if nama_saya in nama_siswa:
                 id_yang_mesti_ditampilin.append(dokumen.id)
+        # Domain
         domain = [("id", "in", id_yang_mesti_ditampilin)]
+        # Jurus supaya dari Backend keluarin View Enrolled Course
         return {
             'name': 'Enrolled Course',
             'view_type': 'form',
