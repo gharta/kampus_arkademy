@@ -72,7 +72,7 @@ class KampusSiswa(models.Model):
         self.env['kampus.kuliah'].browse(1)
 
         self.env['kampus.kuliah'].browse(1).name
-        self.env['kampus.kuliah'].browse(1).umur
+        # self.env['kampus.kuliah'].browse(1).umur
         self.env['kampus.kuliah'].browse(1).dosen_id.id
 
         # FROM kampus_kuliah

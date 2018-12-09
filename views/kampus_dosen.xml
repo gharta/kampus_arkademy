@@ -37,6 +37,7 @@
                                 <field name="name"/>
                             </group>
                             <group>
+                                <field name="topik_ids" widget="many2many_tags"/>
                             </group>
                         </group>
                     </sheet>

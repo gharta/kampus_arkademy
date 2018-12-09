@@ -38,15 +38,16 @@
                         <group>
                             <group string="Detail Kelas">
                                 <field name="name"/>
-                                <field name="dosen_id"/>
+                                <field name="dosen_id" domain="[('name', 'ilike', 'Pak'), ('topik_ids', 'in', topik_ids)]"/>
                                 <field name="kapasitas_siswa"/>
+                                <field name="gender"/>
                                 <field name="is_full"/>
                             </group>
                             <group>
                             </group>
                         </group>
                         <field name="topik_ids"/>
-                        <field name="siswa_ids"/>
+                        <field name="siswa_ids" domain="[('gender', '=', gender)]"/>
                     </sheet>
                 </form>
             </field>

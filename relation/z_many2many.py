@@ -4,7 +4,12 @@ from odoo.exceptions import UserError, ValidationError
 class KampusKuliah(models.Model):
     _inherit = 'kampus.kuliah'
 
-    siswa_ids = fields.Many2many('kampus.siswa', string='Siswa Terkait')
+    siswa_ids = fields.Many2many('kampus.siswa', domain="[(gender', '=', gender)]", string='Siswa Terkait')
+
+class KampusDosen(models.Model):
+    _inherit = 'kampus.dosen'
+
+    topik_ids = fields.Many2many('kampus.kuliah.topik', string='Topik')
 
 
 # Contoh di Odoo
