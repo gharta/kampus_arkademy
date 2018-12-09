@@ -59,10 +59,19 @@ class KampusSiswa(models.Model):
         # """
 
         kuliah_pertama_name = self.env['kampus.kuliah'].browse(1).name
-
-
-
         siswa_pertama_name = self.env['kampus.siswa'].browse(1).name
+
+        # D. Odoo EMANG baik banget
+        # Daripada nulis self.env['kampus.siswa']
+        # Langsung aja self
+        # Karena memang function ini ada di class KelasSiswa
+        
+        id_siswa_row_satu = self.browse(1).id
+        umur_siswa_row_satu = self.browse(1).umur
+
+        # E. Ketika mencet tombol di Form ID = 15
+        id_siswa_row_lima_belas = self.id
+        umur_siswa_row_lima_belas = self.umur
 
 
 
